@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    background-color: #1a1924;
+    font-size: 1.6rem;
+    color: #e1e1e6;
+    font-family: 'Roboto', sans-serif;
+}
+#app{
+    padding: 2.4rem 3.2rem;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    max-width: 90%;
+}
+#user-info{
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+#top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#user-info img{
+    width: 4.8rem;
+    height: 4.8rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+#user-status .status{
+    display: flex;
+    align-items: baseline;
+    gap: .4rem;
+    margin-top: .4rem;
+    color: #00b37e;
+    font-size: 1.2rem;
+}
+#user-status .status strong{
+    font-weight: 700;
+}
+#user-status .status::before {
+    content:'';
+    width: 0.8rem;
+    height: 0.8rem;
+    display: block;
+    background-color: #00b37e;
+    border-radius: 50%;
+}
+#start-chat{
+    margin-top: 2.6rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+}
+.chat{
+    margin-top: 3rem;
+    display: grid;
+    gap: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+#messages{
+    overflow-y: scroll;
+    padding-bottom: 2.4rem;
+}
+#messages::-webkit-scrollbar{
+    display: none;
+}
+.body-message{
+    width: fit-content;
+    margin-top: 1rem;
+    background-color: #633bbc;
+    padding: 1.4rem;
+    border-radius: 0 .8rem .8rem .8rem;
+}
+.message:not(.you){
+    width: 60vw;
+}
+.message.you{
+    margin-left: auto;
+}
+.message.you .time-sent{
+    text-align: right;
+}
+.message.you .body-message {
+    background-color: #07847e;
+    border-radius: .8rem .8rem 0 .8rem;
+}
+form {
+    background-color: #282843;
+    border-radius: 90rem;
+    padding: 1.4rem 2.4rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+input{
+    flex: 1;
+    outline: none;
+}
+form:focus-within{
+    outline: .1rem solid #e1e1e6;
+}
+button i{
+    color: #e1e1e6;
+    font-size: 2.4rem;
+}
+input::placeholder{
+    color: #e1e1e6;
+}
+input, button{
+    background-color: transparent;
+    border: 0;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=Chat, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <title>Chat</title>
+</head>
+<body>
+    <div id="app">
+            <div id="top">
+                <div id="user-info">
+                    <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="profile pic">
+                    <div id="user-status">
+                        <strong>Cecília Sassaki</strong>
+                        <div class="status" onclick="online()">Online</div>
+                    </div>
+                </div>
+                <div id="close-chat"><i class="ph-x"></i></div>
+            </div>
+            <div id="messages">
+                <div id="start-chat">Hoje 11:30</div>
+
+                <div class="chat">
+                    <div class="message">
+                        <div class="time-sent">Cecília - 11:30</div>
+                        <div class="body-message">Tive uma ideia incrível para um projeto!</div>
+                    </div>
+                    <div class="message you">
+                        <div class="time-sent">Você - 11:32</div>
+                        <div class="body-message">Sério? Me conta mais!</div>
+                    </div>
+                    <div class="message">
+                        <div class="time-sent">Cecília - 11:34</div>
+                        <div class="body-message">E se a gente fizesse um chat moderno e responsivo em apenas uma semana?</div>
+                    </div>
+                    <div class="message you">
+                        <div class="time-sent">Você - 11:36</div>
+                        <div class="body-message">#boraCodar</div>
+                    </div>
+                </div>
+            </div>
+            <form id="bottom">
+                        <input type="text" placeholder="Digite sua mensagem"><button><i class="ph-paper-plane-right"></i></button>
+            </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
